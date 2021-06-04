@@ -1,0 +1,107 @@
+// Preloading svgs to avoid flash on hover
+#page::after {
+    display: none;
+    content: 
+        url("#{$images}buttons/cta_small_blue.svg")
+        url("#{$images}buttons/cta_big_blue.svg")
+        url("#{$images}buttons/cta_small_yellow.svg")
+        url("#{$images}buttons/cta_big_yellow.svg")
+        url("#{$images}buttons/cta_small_white.svg")
+        url("#{$images}buttons/cta_big_white.svg")
+        url("#{$images}buttons/mailchimp-submit--navy.svg")
+        url("#{$images}buttons/social-twitter-hov.svg")
+        url("#{$images}buttons/social-ig-hov.svg")
+        url("#{$images}buttons/social-fb-hov.svg")
+}
+
+
+// SVG Button styles
+.c-btn {
+    @include font($cervo, 16px, 3px, 26px);
+    font-weight: 300;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 15px;
+    transition: all ease 200ms;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    @media screen and (min-width: 375px) {
+        font-size: 17px;
+    }
+    
+    &--small {
+        padding: 14px 25px 12px;
+        min-width: 200px;
+        
+        @include media-breakpoint-up(lg) {
+            padding: 23px 49px 21px;
+        }
+        
+        // Background Colours
+        &.c-btn--blue {
+            background-image: url("#{$images}buttons/cta_small_blue.svg");
+            color: $white;
+        }
+        &.c-btn--yellow {
+            background-image: url("#{$images}buttons/cta_small_yellow.svg");
+            color: $navy;
+        }
+        &.c-btn--white {
+            background-image: url("#{$images}buttons/cta_small_white.svg");
+            color: $navy;
+        }
+        
+        // Hover colours
+        &.c-btn--hov-blue:hover {
+            background-image: url("#{$images}buttons/cta_small_blue.svg");
+            color: $white;
+        }
+        &.c-btn--hov-yellow:hover {
+            background-image: url("#{$images}buttons/cta_small_yellow.svg");
+            color: $navy;
+        }
+        &.c-btn--hov-white:hover {
+            background-image: url("#{$images}buttons/cta_small_white.svg");
+            color: $navy;
+        }
+    }
+    
+    &--big {
+        padding: 16px 28px 15px;
+        min-width: 250px;
+        
+        @include media-breakpoint-up(lg) {
+            padding: 24px 42px 22px;
+        }
+
+        // Background colours
+        &.c-btn--blue {
+            background-image: url("#{$images}buttons/cta_big_blue.svg");
+            color: $white;
+        }
+        &.c-btn--yellow {
+            background-image: url("#{$images}buttons/cta_big_yellow.svg");
+            color: $navy;
+        }
+        &.c-btn--white {
+            background-image: url("#{$images}buttons/cta_big_white.svg");
+            color: $navy;
+        }
+
+        // Hover colours
+        &.c-btn--hov-blue:hover {
+            background-image: url("#{$images}buttons/cta_big_blue.svg");
+            color: $white;
+        }
+        &.c-btn--hov-yellow:hover {
+            background-image: url("#{$images}buttons/cta_big_yellow.svg");
+            color: $navy;
+        }
+        &.c-btn--hov-white:hover {
+            background-image: url("#{$images}buttons/cta_big_white.svg");
+            color: $navy;
+        }
+    }
+}

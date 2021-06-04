@@ -1,0 +1,35 @@
+.page-template-catering-and-private-events {
+
+    .con-img {
+        padding-top: 0;
+        margin-bottom: 50px;
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 120px;
+        }
+
+        &.is-reversed {
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 185px;
+            }
+        }
+
+        &__content-col {
+            @include media-breakpoint-up(lg) {
+                bottom: 25% !important;
+
+                &.is-reversed {
+                    bottom: 25% !important;
+                }
+            }
+
+        }
+    }
+
+    .three-cols {
+        margin-bottom: 75px;
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 125px;
+        }
+    }
+
+}

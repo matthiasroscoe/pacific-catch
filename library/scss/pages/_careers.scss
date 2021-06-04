@@ -1,0 +1,81 @@
+.page-template-careers {
+
+    #con-img-1 {
+        margin-bottom: 0px;
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 130px;
+            padding-top: 135px;
+
+            .con-img__content-col {
+                bottom: 130px;
+            }
+        }
+
+    }
+
+    .team {
+        &__title {
+            color: $navy;
+            @include font($cervo, 40px, 4px, 50px, 500);
+            margin-bottom: 55px;
+            
+            @include media-breakpoint-up(lg) {
+                text-align: center;
+                font-size: 50px; 
+                line-height: 60px;
+            }
+        }
+
+        .con-img {
+            padding-top: 0;
+        }
+        
+        .con-img-simple {
+            margin-bottom: 0px;
+
+            &__leaf {
+                @include media-breakpoint-up(lg) {
+                    bottom: auto;
+                    top: -450px;
+                }
+            }
+        }
+    }
+
+
+    .careers-leaf {
+        width: 40%;
+        max-width: 500px;
+        z-index: 2;
+        position: relative;
+        left: 70%;
+        margin-top: -100px;
+        transform: rotate(15deg);
+        width: 100%;
+        // left: 30%;
+        margin-top: -160px;
+
+        @include media-breakpoint-down(md) {
+            display: none;
+            // width: 40%;
+            // left: 70%;
+            // margin-top: -100px;
+        }
+    }
+
+
+    #con-img-3 {
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 0px;
+            padding-top: 0px;
+        }
+    }
+
+    #con-img-4 {
+        @include media-breakpoint-down(md) {
+            padding-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
+}

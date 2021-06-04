@@ -1,0 +1,107 @@
+.three-cols {
+    position: relative;
+    color: $navy;
+
+    /* Background */
+    &__inner {
+        position: relative;
+    }
+
+    &__bg {
+        position: absolute;
+        top: 10px;
+        width: 100%;
+        height: 95%;
+        height: calc(100% - 145px);
+        
+        @include media-breakpoint-up(lg) {
+            height: 80%;
+        }
+
+        .top {
+            margin-bottom: -5px;
+        }
+
+        div {
+            background: $light-yellow;
+            height: 100%;
+            @include media-breakpoint-up(lg) {
+                height: 105%;
+            }
+        }
+    }
+
+
+    /* Section Title & Leaf */
+    &__title {
+        @include font($cervo, 60px, 4px, 70px);
+        color: $navy;
+        font-weight: 500;
+        text-align: center;
+        
+        @include media-breakpoint-up(lg) {
+            @include font($cervo, 75px, 4px, 90px);
+        }
+    }
+
+    &__leaf {
+        position: absolute;
+        top: 0;
+        right: -1%;
+        transform: rotate(-100deg);
+        max-width: 400px;
+        width: 18%;
+
+        &.has-neg-margin {
+            top: -75px;
+            @include media-breakpoint-up(lg) {
+                top: -175px;
+            }
+        }
+
+        @include media-breakpoint-down(md) {
+            width: 140px;
+            right: -50px;
+        }
+    }
+
+    /* Columns */
+    &__col {
+        margin-top: 0;
+        margin-bottom: 65px;
+        text-align: center;
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 100px;
+            margin-bottom: 0;
+        }
+
+        &:nth-of-type(2) {
+            margin-top: 0;
+        }
+    }
+
+    &__heading {
+        margin-bottom: 25px;
+        @include font($cervo, 40px, 4px, 50px, 500);
+        @include media-breakpoint-up(lg) {
+            @include font($cervo, 50px, 4px, 60px, 500);
+        }
+    }
+
+    &__img {
+        margin-bottom: 20px;
+        height: 260px;
+        
+        @include media-breakpoint-up(lg) {
+            height: 29vw;
+            max-height: 400px;
+        }
+    }
+
+    &__text {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+}

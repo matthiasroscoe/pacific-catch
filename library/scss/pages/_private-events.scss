@@ -1,0 +1,17 @@
+.page-template-private-events {
+
+    .intro {
+        &__leaf {
+            left: auto;
+            right: -14%;
+            bottom: -50%;
+            transform: none;
+        }
+    }
+
+    .con-img {
+        &.is-reversed {
+            margin-bottom: 120px;
+        }
+    }
+}

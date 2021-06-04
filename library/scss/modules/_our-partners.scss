@@ -1,0 +1,108 @@
+
+
+
+.our-partners {
+    background: $dark-navy;
+    color: $white;
+    position: relative;
+    padding-bottom: 0px;
+
+    @include media-breakpoint-up(lg) {
+        padding-bottom: 36px;
+    }
+
+    /* SVG Borders */
+    &__top {
+        margin-bottom: -1px;
+        width: 105vw;
+    }
+    &__bottom {
+        margin-top: -1px;
+        width: 105vw;
+    }
+
+    &__top, &__bottom {
+        display: block;
+        position: relative;
+        @include media-breakpoint-down(md) {
+            width: 250%;
+            left: -76%;
+        }
+    }
+    
+    /* Text content */
+    &__content {
+        margin-bottom: 35px;
+    }
+
+    &__title {
+        @include font($cervo, 40px, 4px, 1.2, 500);
+        margin-bottom: 20px;
+        margin-top: 40px;
+        max-width: 200px;
+        
+        @include media-breakpoint-up(lg) {
+            max-width: none;
+            @include font($cervo, 50px, 4px, 70px, 500);
+        }
+    }
+
+    &__text {
+        @include font($proxima, 15px, 1px, 32px);
+        padding-right: 50px;
+        font-weight: 400;
+        margin-top: -10px;
+        
+        @include media-breakpoint-up(lg) {
+            @include font($proxima, 17px, 1px, 32px);       
+            padding-right: 0;     
+            margin-top: 0;
+        }
+    }
+
+    /* Logos */
+    &__logos {
+        @include flexbox(space-around, center);
+        flex-wrap: wrap;
+
+        @include media-breakpoint-up(lg) {
+            justify-content: space-between;
+        }
+        
+        &__link {
+            flex: 0 0 25%;
+            height: 130px;
+            width: auto;
+            display: block;
+        }
+        
+        img {
+            width: auto;
+            display: block;
+            object-fit: contain;
+            height: 130px;
+            @include media-breakpoint-down(md) {
+                margin-bottom: 30px;
+                max-width: 134px;
+            }
+        }
+    }
+
+    /* Leaf illustration */
+    &__leaf {
+        width: 225px;
+        position: absolute;
+        top: -120px;
+        right: -13.5%;
+        transform: rotate(-58deg);
+        
+        @include media-breakpoint-up(lg) {
+            width: 34%;
+            max-width: 600px;
+        }
+
+        @include media-breakpoint-up(xxxl) {
+            
+        }
+    }
+}

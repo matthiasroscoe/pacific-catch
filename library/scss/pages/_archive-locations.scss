@@ -1,0 +1,312 @@
+.post-type-archive-location {
+    color: $navy;
+
+    /* Top Banner */
+
+    .top-banner {
+        &__title {
+            @include media-breakpoint-down(md) {
+                margin-bottom: 35px;
+            }
+        }
+    }
+
+
+    /* Map View/List View buttons */
+    .toggle-location-view {
+        text-align: center;
+        position: relative;
+
+        .view-toggle {
+            margin: 0 28px;
+            position: relative;
+            cursor: pointer;
+            transition: all ease 300ms;
+            opacity: .3;
+
+            &.is-active {
+                opacity: 1;
+            }
+
+            @include media-breakpoint-up(lg) {
+                margin: 0 70px;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 10px;
+                background-size: contain;
+                background-image: url('#{$images}icons/wave-divider--blue.svg');
+                background-repeat: no-repeat;
+            }
+
+            &:hover {
+                opacity: 1;
+            }
+            
+            h2 {
+                @include font($cervo, 20px, 2px, 30px, 400);
+                margin-bottom: 10px;
+                padding-left: 3px;
+
+                @include media-breakpoint-up(lg) {
+                    @include font($cervo, 25px, 4px, 44px, 400);
+                }
+            }
+        }
+    }
+
+
+    /* Zipcode search */
+    .find-loc {
+        text-align: center;
+        position: relative;
+        z-index: $z-ind-1;
+        margin-bottom: 40px;
+        margin-top: 80px;
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+
+        &__top {
+            display: block;
+            margin-bottom: -2px;
+        }
+
+        &__inner {
+            background: white;
+            padding-top: 40px;
+            padding-bottom: 50px;
+
+            @include media-breakpoint-up(lg) {
+                padding-top: 0;
+                padding-bottom: 40px;
+            }
+        }
+
+        &__text {
+            max-width: 70vw;
+            margin: 0 auto 30px;
+
+            @include media-breakpoint-up(lg) {
+                max-width: none;
+                margin-bottom: 18px;
+            }
+        }
+
+        &__search {
+            @include flexbox(center, center);
+
+            input[name="zipcode"] {
+                appearance: none;
+                border: none;
+                border-bottom: 1px solid #B0C3D5;
+                border-radius: 0;
+                padding: 10px 0;
+                text-transform: uppercase;
+                width: 330px;
+                outline: none;
+                @include font($proxima, 15px, 3px, 24px);
+                color: $navy;
+
+                &::placeholder {
+                    color: #B0C3D5;
+                }
+            }
+
+            input[type="submit"] {
+                cursor: pointer;
+                margin-left: 12px;
+                appearance: none;
+                border: none;
+                background: none;
+                opacity: 1;
+                transition: opacity ease 300ms;;
+                width: 36px;
+                height: 36px;
+                background-image: url('#{$images}icons/search.svg');
+                background-repeat: no-repeat;
+                background-size: 16px 16px;
+                background-position: center;
+
+                &:hover {
+                    opacity: .7;;
+                }
+            }
+        }
+
+        &__error {
+            text-align: left;
+            margin-top: 10px;
+            font-size: 14px;
+            opacity: .7;
+        }
+
+        &__leaf {
+            position: absolute;
+            right: -144px;
+            width: 275px;
+            top: -60px;
+            transform: rotate(15deg);
+
+            @include media-breakpoint-up(lg) {
+                right: -6%;
+                width: 33%;
+                top: -130px;
+                transform: rotate(0deg);
+            }
+        }
+    }
+
+
+    /* Locations Grid */
+    .locations-grid {
+        margin-bottom: 50px;
+        position: relative;
+
+        .js-locations-container {
+            transition: all ease 300ms;
+            opacity: 1;
+            visibility: visible;
+            justify-content: center;
+
+            &.is-faded {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+        // Grid item
+        &__item {
+            text-align: center;
+            margin-bottom: 55px;
+
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 110px;
+            }
+
+            h2 {
+                @include font($cervo, 30px, 4px, 35px, 500);
+                color: $light-blue;
+            }
+
+            &-image {
+                width: 200px;
+                height: 200px;
+                margin: 0 auto 20px;
+                display: block;
+                overflow: hidden;
+                border-radius: 50%;
+                
+                @include media-breakpoint-up(lg) {
+                    width: 242px;
+                    height: 242px;
+                }
+                
+                img {
+                    border-radius: 50%;
+                    height: 100%;
+                    width: 100%;
+                    transition: transform ease-in-out 750ms;
+                }
+
+                &:hover {
+                    img {
+                        @include media-breakpoint-up(lg) {
+                            transform: scale(1.08);
+                        }
+                    }
+                }
+            }
+
+
+            .address {
+                @include media-breakpoint-up(lg) {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        &__leaf-1 {
+            position: absolute;
+            z-index: $z-ind-0;
+            top: -10%;
+            left: -10%;
+            width: 75%;
+            transform: rotate(25deg);
+
+            @include media-breakpoint-down(md) {
+                top: -170px;
+                left: -40%;
+                width: 300%;
+                transform: rotate(35deg);
+            }
+        }
+
+        &__leaf-2 {
+            position: absolute;
+            z-index: $z-ind-0;
+            bottom: 42%;
+            right: -10%;
+            width: 41%;
+            transform: rotate(250deg) scale(-1);
+
+            @include media-breakpoint-down(md) {
+                display: none;
+            }
+        }
+    }
+
+
+    /* Locations Map */
+    .js-map-view-container {
+        display: none;
+    }
+
+    .locations-map {
+        margin-bottom: 200px;
+        margin-top: 40px;
+        @include media-breakpoint-up(lg) {
+            margin-top: 0;
+        }
+
+        &__map-container {
+            margin-top: 50px;
+            height: 340px;
+
+            @include media-breakpoint-up(md) {
+                height: 440px;
+            }
+            
+            @include media-breakpoint-up(lg) {
+                height: 550px;
+            }
+
+            // Info windows
+            .gm-style-iw-d {
+                color: $navy;
+                h1 {
+                    @include font($proxima, 15px, 2px, 1.2, 600);
+                    text-transform: uppercase;
+                }
+
+                p {
+                    @include font($proxima, 14px, 1px, 1.2, 400);
+                }
+
+                a {
+                    @include font($proxima, 13px, 3px, 1.2, 400);
+                    text-decoration: underline;
+                    text-transform: uppercase;
+                    color: $light-blue;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,226 @@
+#site-header {
+    position: fixed;
+    z-index: $z-ind-fixed;
+    width: 100%;
+    transition: all ease-in-out 600ms;
+
+    .is-scrolled & {
+        max-width: none;
+        left: auto;
+        transform: none;
+    }
+
+    &.nav-active {
+        .header-inner {
+            background: $dark-grey;
+        }
+    }
+
+    .row {
+        padding: 20px 0;
+        transition: all ease-in-out 600ms;
+        background-color: $navy;
+        
+        @include media-breakpoint-up(lg) {
+            position: absolute;
+            z-index: $z-ind-fixed;
+            width: 100%;
+            padding: 40px 30px 0;
+            background-color: transparent;
+        }
+
+        .is-scrolled & {
+            @include media-breakpoint-up(lg) {
+                padding: 15px 30px 15px;
+                background-color: $navy;
+            }    
+            @include media-breakpoint-up(xl) {
+                padding: 20px 30px 12px;
+            }
+        }
+
+        .nav-active & {
+            background-color: $navy;
+        }
+    }
+
+    .left-menu {
+        &__inner {
+            @include flexbox(space-between, center);
+            padding-right: 50px;
+            max-width: 500px;
+        }
+
+        a {
+            @include font($cervo, 18px, 2px, 26px, 400);
+            color: $white;
+            opacity: 1;
+            transition: all ease 300ms;
+
+            &:hover {
+                opacity: .65;
+            }
+        }
+    }
+
+    #site-logo {
+        flex: 0 0 100px;
+        padding-right: 10px;
+        img {
+            max-width: 80px;
+        }
+
+        @media screen and (min-width: 375px) {
+            flex: 0 0 110px;
+            padding-right: 15px;
+            img {
+                max-width: 90px;
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            flex: 0 0 230px;
+            @include flexbox(flex-start, center);
+
+            img {
+                max-width: none;
+            }
+        }
+        
+        @include media-breakpoint-up(xl) {
+            padding-bottom: 10px;
+            @include flexbox(center, center);
+        }
+        
+        @include media-breakpoint-up(xxl) {
+            flex: 0 0 260px;
+        }
+    }
+
+    .right-menu {
+        @include flexbox(flex-end, center);
+        padding-left: 0;
+
+        .takeout-delivery {
+            color: $navy;
+            @include font($cervo, 12px, 0.5px, 16px, 400);
+            padding: 9px 10px 10px;
+            min-width: 85px;
+            text-align: center;
+            
+            background-image: url('#{$images}buttons/nav-cta-large.svg');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center 25%;
+            
+            @media screen and (min-width: 375px) {
+                min-width: 110px;
+                @include font($cervo, 13px, 1px, 16px, 400);
+                background-size: contain;
+            }
+            
+            @include media-breakpoint-up(lg) {
+                @include font($cervo, 18px, 2px, 26px, 400);
+                padding: 15px 15px 13px 15px;
+                position: relative;
+                top: -1px;
+                min-width: 160px;
+                text-align: center;
+                background-position: center;
+            }
+            
+            @include media-breakpoint-up(xxl) {
+                padding: 17px 28px 13px 28px;
+                min-width: 174px;
+                top: 1px;
+            }
+        }
+
+        .book-now {
+            color: $navy;
+            @include font($cervo, 12px, 0px, 16px, 400);
+            padding: 10px;
+            margin-left: 5px;
+            
+            background-image: url('#{$images}buttons/nav-cta-small--mobile.svg');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            
+            @media screen and (min-width: 375px) {
+                @include font($cervo, 13px, 1px, 16px, 400);
+                background-size: contain;
+                padding: 11px 13px 11px 13px;
+            }
+
+            @include media-breakpoint-up(lg) {
+                background-image: url('#{$images}buttons/nav-cta-small.svg');
+                @include font($cervo, 18px, 2px, 26px, 400);
+                background-size: 121px 52px;
+                padding: 15px 24px 15px 19px;
+                margin-left: 20px;
+            }
+
+            @include media-breakpoint-up(xl) {
+                margin-left: 10px;
+            }
+
+            @include media-breakpoint-up(xxl) {
+                padding: 13px 30px 10px 25px;
+                margin-left: 15px;
+                background-size: contain;
+            }
+        }
+
+        .hamburger {
+            width: 24px;
+            margin-left: 15px;
+            cursor: pointer;
+            transition: all ease 300ms;
+            
+            @media screen and (min-width: 375px) {
+                margin-left: 20px;
+            }
+
+            @include media-breakpoint-up(lg) {
+                width: auto;
+            }
+
+            &__inner {
+                @include flexbox(center, center);
+                flex-direction: column;
+                
+                .line {
+                    width: 27px;
+                    height: 4px;
+                    background-image: url('#{$images}icons/hb-line.svg');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    transition: all ease-in-out 100ms;
+                    margin-top: 1px;
+                    margin-bottom: 1px;
+                    
+                    @include media-breakpoint-up(lg) {
+                        width: 37px;
+                        height: 5px;
+                        margin-top: 2px;
+                        margin-bottom: 2px;
+                    }
+                }
+
+                &:hover {
+                    @include media-breakpoint-up(lg) {
+                        .line {
+                            margin-top: 3px;
+                            margin-bottom: 3px;
+                        }
+                    }
+                }
+            }
+            
+
+            &:hover {
+                opacity: .7;
+            }
+        }
+    }
+}

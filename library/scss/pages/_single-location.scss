@@ -1,0 +1,124 @@
+.single-location {
+
+    // Hero
+    .hero {
+        @include media-breakpoint-down(md) {
+            margin-bottom: 100px;
+        }
+    }
+
+    // Intro
+    .location-intro {
+        margin: 40px 0 80px;
+        position: relative;
+
+        @include media-breakpoint-up(lg) {
+            margin: 40px 0;
+        }
+    
+        &__top { margin-bottom: -10px; }
+    
+        &__container {
+            background: $white;
+            text-align: center;
+            color: $navy;
+
+            @include media-breakpoint-down(md) {
+                padding-top: 40px;
+                padding-bottom: 30px;
+            }
+        }
+    
+        &__title {
+            @include font($cervo, 30px, 3px, 38px);
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        &__text {
+            @include media-breakpoint-down(md) {
+                margin-bottom: 40px;
+            }
+        }
+    
+        /* Opening Hours */
+        &__hours-title {
+            @include font($cervo, 24px, 2px, 28px);
+            font-weight: 500;
+            margin-bottom: 5px;
+            margin-top: 25px;
+        }
+    
+        &__hours-text {
+            margin-bottom: 10px;
+        }
+    
+        /* Happy Hour */
+        &__happy-hour {
+            @include flexbox(center, center);
+            margin-bottom: 5px;
+    
+            img {
+                width: 40px;
+                margin-bottom: 4px;
+            }
+            p {
+                padding-left: 10px;
+                @include font($cervo, 20px, 2px, 30px);
+                margin-bottom: 0;
+            }
+        }
+    
+        &__leaf {
+            transform: rotate(180deg);
+            position: absolute;
+            left: -14.5%;
+            bottom: -2%;
+            width: 40%;
+
+            @include media-breakpoint-down(md) {
+                left: -28%;
+                bottom: -9%;
+                width: 60%;
+            }
+        }
+    }
+
+
+    // Features 
+    .image-grid-small {
+        &__title {
+            @include media-breakpoint-down(md) {
+                margin-bottom: 65px;
+            }
+        }
+        &__bg {
+            background-size: 100% 100%;
+            @include media-breakpoint-up(lg) {
+                background-size: 100% 77.5%;
+            }
+        }
+
+        &__item {
+            @include media-breakpoint-down(md) {
+                @include flexbox(flex-start, flex-start);
+
+                img {
+                    margin: 0 25px 0 15px;
+                    width: 100px;
+                    height: 100px;
+                }
+
+                p {
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+
+    .three-cols {
+        margin-bottom: 50px;
+    }
+}
+

@@ -1,0 +1,81 @@
+.page-template-about-us {
+
+    .intro {
+        .intro--about__tagline {
+            width: 375px;
+            max-width: 90%;
+            margin-top: -20px;
+            margin-bottom: 12px;
+        }
+
+        .intro--about__map {
+            width: 250px;
+            right: -50px;
+            top: -60px;
+            max-width: 80%;
+            @include media-breakpoint-up(sm) {
+                width: 400px;
+            }
+            @include media-breakpoint-up(lg) {
+                width: 550px;
+            }
+        }
+
+        .intro--about__wc-stamp {
+            top: -90px;
+            left: -5%;
+            max-width: 110px;
+            transform: rotate(-7deg);
+            z-index: $z-ind-2;
+            @include media-breakpoint-up(sm) {
+                top: -40px;
+                left: -2%;
+                max-width: 140px;
+            }
+            @include media-breakpoint-up(lg) {
+                left: 5%;
+                max-width: 175px;
+            }
+        }
+
+        .intro--about__maui-stamp {
+            bottom: -35px;
+            right: -1%;
+            max-width: 100px;
+            transform: rotate(10deg);
+            @include media-breakpoint-up(sm) {
+                bottom: -15px;
+                max-width: 140px;
+            }
+            @include media-breakpoint-up(lg) {
+                bottom: 15px;
+                right: 5%;
+            }
+        }
+    }
+
+    .con-img {
+        margin-bottom: 0px;
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 100px;
+        }
+
+        &#partners-1 {
+            .con-img__content-col {
+                @include media-breakpoint-up(lg) {
+                    flex: 0 0 46%;
+                    max-width: 46%;
+                }
+            }
+        }
+    }
+
+
+    .con-img-simple {
+        &__leaf {
+            @include media-breakpoint-down(md) {
+                bottom: 0;
+            }
+        }
+    }
+}

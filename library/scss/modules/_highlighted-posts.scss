@@ -1,0 +1,189 @@
+.hl-posts {
+    position: relative;
+    margin-bottom: 30px;
+    margin-top: -50px;
+    
+    &__bg {
+        @include flexbox(center, center);
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        height: calc(100% - 80px);
+        top: 80px;
+        
+        @include media-breakpoint-up(md) {
+            height: calc(100% - 200px);
+        }
+
+        &-top {
+            display: block;
+            margin-bottom: -2px;
+        }
+        &-bottom {
+            display: block;
+            margin-top: -2px;
+        }
+        div {
+            flex: 1;
+            width: 100%;
+            background: #4B8EBE;
+        }
+    }
+
+
+
+    .hl-posts__inner {
+        padding-bottom: 50px;
+        max-width: 1850px;
+        margin: 0 auto;
+
+        @include media-breakpoint-up(md) {
+            padding-bottom: 100px;
+        }
+
+        // Add padding above/below slider to prevent overflow issue of image clipping when rotated.
+        .flickity-viewport {
+            padding: 50px 0 0px;
+            @include media-breakpoint-up(md) {
+                padding-bottom: 50px;
+            }
+        }
+
+        .flickity-prev-next-button {
+            background: none;
+            color: rgba($white, .5);
+            transition: color ease 200ms;
+
+            &:hover, &:active {
+                color: rgba($white, 1);
+            }
+
+            @include media-breakpoint-up(xl) {
+                &.previous {
+                    left: 45px;
+                }
+                &.next {
+                    right: 45px;
+                }
+            }
+
+            @include media-breakpoint-down(md) {
+                &.previous {
+                    left: 0;
+                }
+                &.next {
+                    right: 0;
+                }
+            }
+        }
+    }
+
+
+
+    /* Text column */
+    .hl-posts__slide {
+        @include media-breakpoint-down(sm) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__text-col {
+        padding-top: 75px;
+        padding-bottom: 30px;
+        color: $white;
+        @include media-breakpoint-up(md) {
+            padding-bottom: 140px;
+        }
+    }
+
+    &__subtitle {
+        @include font($cervo, 20px, 3px, 35px, 400);
+        margin-bottom: 10px;
+
+        @include media-breakpoint-up(md) {
+            font-size: 25px;
+            line-height: 40px;
+            font-weight: 500;
+        }
+    }
+
+    &__title {
+        @include font($cervo, 25px, 3px, 28px, 500);
+        margin-bottom: 25px;
+
+        @include media-breakpoint-up(md) {
+            font-size: 35px;
+            line-height: 38px;
+            letter-spacing: 4px;
+        }
+    }
+
+    &__region {
+        @include font($cervo, 18px, 2px, 22px, 400);
+        margin-bottom: 10px;
+    }
+
+    .c-wave-divider {
+        margin-bottom: 20px;
+    }
+
+    .c-btn {
+        @include media-breakpoint-up(lg) {
+            min-width: 240px;
+        }
+    }
+
+
+    /* Image Col */
+    &__img-col {
+        max-height: 600px;
+        max-width: 600px;
+        padding-bottom: 25px;
+        img {
+            transform: rotate(4deg);
+            max-height: 100%;
+            padding: 40px;
+            margin-top: -30px;
+
+            @include media-breakpoint-up(md) {
+                padding: 0 0 0 10px;
+                margin-top: 20px;
+            }
+            
+            @include media-breakpoint-up(lg) {
+                padding: 30px;
+                margin-top: -20px;
+            }
+
+            @include media-breakpoint-up(xl) {
+                padding: 40px;
+            }
+        }
+    }
+
+
+
+    /* Progress */
+    &__slider-nav {
+        position: absolute;
+        bottom: 110px;
+        left: 50%;
+        transform: translateX(-50%);
+        
+        @include media-breakpoint-up(md) {
+            bottom: 160px;
+        }
+
+        .c-wave-nav {
+            padding-left: 15px;
+            width: 185px;
+
+            .progress img {
+                max-width: 185px;
+            }
+        }
+    }
+}

@@ -1,0 +1,114 @@
+.page-template-contact {
+
+
+    // Hero/Banner
+    .top-banner {
+        &__title {
+            margin-bottom: 0px;
+        }
+    }
+
+
+    // Intro
+    .intro {
+        margin-top: 0;
+        color: $navy;
+        text-align: center;
+
+        &-container {
+            background-color: $white;
+            padding-bottom: 0;
+        }
+
+        &__contact-info {
+            @include flexbox(center,center);
+            flex-direction: column;
+
+            @include media-breakpoint-up(lg) {
+                flex-direction: row;
+            }
+
+            >div {
+                margin: 0px 20px 20px;
+                flex: 1;
+                max-width: 280px;
+            }
+
+            h3 {
+                @include font($cervo, 24px, 3px, 40px);
+                margin-bottom: 0;
+            }
+
+            a {
+                @include font($proxima, 16px, 1px, 24px);
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+
+    // Tabbed Forms
+    .contact-tabs {
+        margin-bottom: 100px;
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 150px;
+        }
+
+        &__tabs {
+            @include flexbox(center, stretch);
+            flex-wrap: nowrap;
+
+            .tab {
+                @include flexbox(center, center);
+                background: rgba($blue, 1);
+                opacity: .4;
+                transition: opacity ease 800ms;
+                flex: 1;
+                text-align: center;
+                color: white;
+                min-height: 100px;
+                padding: 20px;
+                @include font($cervo, 21px, 3px, 25px, 400);
+
+                @include media-breakpoint-up(lg) {
+                    @include font($cervo, 31px, 4px, 35px, 400);
+                }
+
+                &:not(.is-active):hover {
+                    opacity: .5;
+                }
+
+                &.is-active {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &__forms {
+            background: #4B8EBE;
+            padding: 70px 0 50px;
+
+            .container {
+                display: none;
+                
+                &.is-active {
+                    display: block;
+                }
+
+                .c-form {
+                    label, .wpcf7-list-item-label {
+                        color: $white;
+                    }
+
+                    .wpcf7-not-valid-tip,
+                    .wpcf7-response-output {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}

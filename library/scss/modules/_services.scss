@@ -1,0 +1,121 @@
+.services {
+    position: relative;
+    padding-top: 60px;
+    margin-bottom: 60px;
+
+    &__bg {
+        top: 140px;
+        background-image: url('#{$images}bg-texture-blue--mobile.png');
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-position: 90% center;
+        
+        @include media-breakpoint-up(lg) {
+            top: 60px;
+            background-size: 100%;
+            background-position: center 65%;
+            background-image: url('#{$images}bg-texture-blue.png');
+        }
+
+        @include media-breakpoint-up(xxxxl) {
+            background-size: 100% 70%;
+            background-position: center 50%;
+        }
+    }
+
+    &.no-subheadings {
+        background-position: center 75%;
+    }
+    
+    &__title {
+        @include font($cervo, 40px, 4px, 44px, 500);
+        color: $navy;
+        @include media-breakpoint-up(lg) {
+            text-align: center;
+            font-size: 50px;
+            line-height: 52px;
+        }
+
+        &.has-large-margin {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__subheading {
+        @include font($cervo, 30px, 3px, 35px);
+        font-weight: 500;
+        color: $navy;
+        margin-bottom: 60px;
+
+        @include media-breakpoint-up(lg) {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        &--2 {
+            margin-top: 55px;
+            color: $white;
+
+            @include media-breakpoint-down(md) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    /* Grid */
+    &__inner {
+        justify-content: flex-start;
+        
+        @include media-breakpoint-up(lg) {
+            justify-content: center;
+            text-align: center;
+        }
+
+        &.has-top-margin {
+            .services__service {
+                margin-top: 60px;
+            }
+        }
+    }
+
+    &__service {
+        @include flexbox(flex-start, center);
+        width: 100%;
+        @include media-breakpoint-up(lg) {
+            display: block;
+            width: 240px;
+        }
+        
+        img {
+            width: 100px;
+            height: 100px;
+            margin: 20px 25px 10px 0; 
+            
+            @include media-breakpoint-up(lg) {
+                width: 240px;
+                height: 240px;
+                margin: 0 auto;
+            }
+        }
+
+        p {
+            text-transform: uppercase;
+            color: $white;
+            font-weight: 600;
+            -webkit-font-smoothing: antialiased;
+            letter-spacing: 2px;
+            margin-top: 11px;
+        }
+
+        &--2 {
+            p {
+                @include media-breakpoint-up(lg) {
+                    color: $navy;
+                }
+            }
+        }
+    }
+
+    
+
+}

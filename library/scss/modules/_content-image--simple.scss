@@ -1,0 +1,87 @@
+.con-img-simple {
+    color: $navy;
+
+    &__title {
+        @include font($cervo, 40px, 4px, 50px, 500);
+        margin: 30px 0 20px;
+        
+        @include media-breakpoint-up(lg) {
+            text-align: center;
+            font-size: 50px;
+            line-height: 52px;
+            margin-bottom: 70px;
+        }
+    }
+
+    &__row {
+        margin-bottom: 70px;
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 110px;
+        }
+
+        .con-img-simple__img-col { 
+            transform: rotate(4deg);
+        }
+        
+        &--reversed {
+            .con-img-simple__img-col { 
+                order: 2;
+                @include media-breakpoint-up(lg) {
+                    order: 1;
+                }
+                transform: rotate(-4deg);
+            }
+            .con-img-simple__text-col { 
+                order: 1;
+                @include media-breakpoint-up(lg) {
+                    order: 2;
+                }
+            }
+        }
+    }
+
+    /* Text Column */
+    &__text-col {
+        @include flexbox(center, flex-start);
+        flex-direction: column;
+        position: relative;
+        z-index: $z-ind-2;
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__heading {
+        @include font($cervo, 30px, 3px, 35px);
+        font-weight: 400;
+        color: $light-blue;
+        margin: 0 0 15px;
+        max-width: 400px;
+    }
+
+    .c-btn {
+        display: inline-block;
+        margin-bottom: 0;
+    }
+
+    /* Img Column */
+    &__img-col {
+        transform: rotate(4deg);
+        img {
+            width: calc(100% - 40px);
+            margin: 0 auto;
+            display: block;
+        }
+    }
+
+
+    /* Background leaf */
+    &__leaf {
+        width: 45%;
+        bottom: -25%;
+        right: -12%;
+        position: absolute;
+        max-width: 1050px;
+    }
+}

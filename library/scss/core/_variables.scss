@@ -1,0 +1,66 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Variables
+
+Here is where we declare all our variables like colors, fonts,
+base values, and defaults. We want to make sure this file ONLY
+contains variables that way our files don't get all messy.
+No one likes a mess.
+
+******************************************************************/
+
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+
+$black: #000000;
+$white: #ffffff;
+
+$beige: #F2F0EC;
+$dark-navy: #2C4454;
+$navy: #31506C;
+$blue: #4378A7;
+$light-blue: #43A9E2;
+$yellow: #F4CA79;
+$light-yellow: #F7EAD1;
+$brown: #E2D4BB;
+
+
+/*
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/
+
+
+/*********************
+Easings
+*********************/
+
+$easeOutQuad: cubic-bezier(.25,.46,.45,.94);
+
+
+/*********************
+Z-index map
+*********************/
+
+$z-ind-neg:     -1 !default;
+$z-ind-0:       0 !default;
+$z-ind-1:       1 !default;
+$z-ind-2:       2 !default;
+$z-ind-3:       3 !default;
+$z-ind-4:       4 !default;
+$z-ind-fixed:   10 !default;
+$z-ind-modal:   15 !default;
+$z-ind-tooltip: 20 !default;
+
+
+/*********************
+Shortcuts
+*********************/
+
+$images: '/wp-content/themes/pacific-catch/library/images/compressed/';

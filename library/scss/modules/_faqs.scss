@@ -1,0 +1,119 @@
+.faqs {
+    color: $navy;
+    margin-bottom: 75px;
+    
+    &__top {
+        display: block;
+    }
+    
+    &__inner {
+        background: $light-yellow;
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+
+    &__title {
+        @include font($cervo, 50px, 4px, 60px);
+        font-weight: 500;
+        text-align: center;
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__notice {
+        text-align: center;
+        max-width: 550px;
+        margin: 0 auto;
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: 80px;
+        }
+    }
+
+
+    /* Questions */
+    &__question-container {
+        padding-bottom: 13px;
+        margin-bottom: 13px;
+        border-bottom: 1px solid rgba($navy, .1);
+
+        @include media-breakpoint-up(lg) {
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__question {
+        @include flexbox(center, center);
+        min-height: 70px;
+        position: relative;
+        top: 2px;
+        cursor: pointer;
+        
+        &-inner {
+            @include flexbox(space-between, center);
+            flex: 1;
+        }
+
+        .question {
+            @include font($cervo, 20px, 1px, 1.2, 400);
+            margin-bottom: 0;
+            padding-right: 30px;
+            
+            @include media-breakpoint-up(lg) {
+                @include font($cervo, 23px, 2px, 30px);
+            }
+        }
+
+        .toggle-icon {
+            width: 17px;
+            height: 17px;
+            position: relative;
+            top: 2px;
+            align-self: flex-start;
+            flex: 0 0 17px;
+
+            @include media-breakpoint-up(lg) {
+                width: 32px;
+                height: 32px;
+                top: 0;
+            }
+
+            .line {
+                background: $navy;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%) rotate(0deg);
+                height: 2px;
+                width: 100%;
+                transition: width 250ms ease;
+            }
+            
+            .line-2 {
+                transform: translate(-50%,-50%) rotate(90deg);
+
+                .is-active & {
+                    width: 0;
+                }
+            }
+        }
+    }
+
+    &__answer {
+        display: none;
+        padding-right: 30px;
+        max-width: 660px;
+        padding-top: 20px;
+
+        @include media-breakpoint-up(lg) {
+            padding-top: 0;
+        }
+
+        .is-active & {
+            display: block;
+        }
+    }
+}

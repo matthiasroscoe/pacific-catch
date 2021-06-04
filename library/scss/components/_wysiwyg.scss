@@ -1,0 +1,75 @@
+.c-wysiwyg {
+    h1 {
+        @include font($cervo, 50px, 4px, 65px);
+        font-weight: 500;
+        margin-bottom: 20px;
+        margin-top: 15px;
+    }
+    
+    h2, h3 {
+        @include font($cervo, 28px, 4px, 40px, 500);
+        margin-bottom: 20px;
+        
+        @include media-breakpoint-up(lg) {
+            @include font($cervo, 35px, 4px, 40px, 500);
+        }
+    }
+
+    h4, h5, h6 {
+        @include font($cervo, 24px, 3px, 30px);
+        font-weight: 500;
+    }
+
+    img {
+        height: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        @include font($proxima, 15px, 1px, 30px);
+        
+        @include media-breakpoint-up(lg) {
+            @include font($proxima, 16px, 1px, 28px);
+        }
+    }
+
+    ul { 
+        list-style: none; 
+        padding-left: 0;
+        margin-top: 0;
+    }
+
+    li {
+        @include font($proxima, 15px, 1px, 30px);
+        font-weight: 500;
+        padding-left: 20px;
+        position: relative;
+        @include media-breakpoint-up(lg) {
+            font-size: 16px;
+            line-height: 26px;
+            margin-bottom: 6px;
+        }
+        
+        &:before {
+            content: '';
+            background-image: url('#{$images}icons/bullet.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 8px;
+            height: 7px;
+            position: absolute;
+            top: 10px;
+            left: 0;
+        }
+    }
+
+    a:not(.c-btn) {
+        color: $light-blue;
+        text-decoration: underline;
+    }
+
+    .c-btn {
+        margin-bottom: 45px;
+    }
+}

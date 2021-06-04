@@ -1,0 +1,132 @@
+.insta {
+    margin-top: -100px;
+    margin-bottom: -11vw;
+    padding-top: 300px;
+    padding-bottom: 200px;
+    
+    background-image: url('#{$images}leaf--bg.svg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 280%;
+    color: $navy;
+    
+    @include media-breakpoint-up(lg) {
+        padding-bottom: calc(30px + 11vw);
+        background-position: 80% 30%;
+        padding-top: 200px;
+        background-size: 150%;
+    }
+
+    &__hashtag {
+        h2 {
+            @include font($cervo, 25px, 1px, 45px);
+            font-weight: 500;
+            text-transform: lowercase;
+            
+            @include media-breakpoint-up(lg) {
+                @include font($cervo, 40px, 0px, 65px);
+                text-transform: lowercase;
+            }
+        }   
+    }
+    
+    &__handle {
+        text-align: right;
+
+        a {
+            @include font($cervo, 25px, 1px, 45px);
+            text-transform: lowercase;
+            font-weight: 500;
+            
+            @include media-breakpoint-up(lg) {
+                @include font($cervo, 40px, 0px, 65px);
+                text-transform: lowercase;
+            }
+        }
+    }
+    
+}
+
+
+/* Feed */
+#sbi_images {
+    position: relative;
+    height: 100vw;
+    margin-top: 40px;
+    
+    @include media-breakpoint-up(lg) {
+        height: 50vw;
+        margin-top: 0;
+    }
+
+    .sbi_item {
+        position: absolute;
+        height: 50vw !important;
+        width: 50vw !important;
+        
+        @include media-breakpoint-up(lg) {
+            height: 20vw !important;
+            width: 20vw !important;
+        }
+
+        &:nth-child(1) {
+            top: 25vw;
+            left: 0;
+            @include media-breakpoint-up(lg) {
+                top: 10vw;
+            }
+        }
+
+        &:nth-child(2) {
+            top: 0;
+            left: 50vw;
+            @include media-breakpoint-up(lg) {
+                left: 20vw;
+            }
+        }
+
+        &:nth-child(3) {
+            top: 50vw;
+            left: 50vw;
+            @include media-breakpoint-up(lg) {
+                top: 20vw;
+                left: 20vw;
+            }
+        }
+
+        &:nth-child(4) {
+            top: 10vw;
+            left: 40vw;
+        }
+
+        &:nth-child(5) {
+            top: 30vw;
+            left: 40vw;
+        }
+
+        &:nth-child(6) {
+            top: 20vw;
+            left: 60vw;
+        }
+
+        &:nth-child(7) {
+            top: 10vw;
+            left: 80vw;
+        }
+
+        &:nth-child(4), &:nth-child(5),
+        &:nth-child(6), &:nth-child(7) {
+            @include media-breakpoint-down(md) {
+                display: none !important;
+            }
+        }
+    }
+
+    // Hover reset
+    .sbi_photo_wrap:hover {
+        .sbi_photo {
+            transition: all ease-in-out 800ms;
+        }
+    }
+}
+

@@ -1,0 +1,41 @@
+.single-post {
+    .hero {
+        margin-bottom: 70px;
+    }
+
+    &-date {
+        color: $light-blue;
+        margin-bottom: 0;
+    }
+
+    .wysiwyg {
+        margin-bottom: 30px;
+    }
+
+    &-back-to-blog {
+        color: $blue;
+        padding-left: 32px;
+        position: relative;
+        @include font($cervo, 22px, 2px, 34px);
+        margin-bottom: 30px;
+        display: inline-block;
+        
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 9px;
+            width: 17px;
+            height: 11px;
+            background-size: contain;
+            background-image: url('#{$images}icons/arrow-left--blue.svg');
+            transition: all ease 300ms;
+        }
+
+        &:hover {
+            &::before {
+                left: -4px;
+            }
+        }
+    }
+}

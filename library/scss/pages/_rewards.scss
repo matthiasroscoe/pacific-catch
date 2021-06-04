@@ -1,0 +1,350 @@
+.page-template-rewards {
+    
+    /* Intro */
+    .intro {
+        margin-bottom: 440px;
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 200px;
+        }
+
+        &__leaf {
+            bottom: -35%;
+
+            @include media-breakpoint-up(md) {
+                left: -15%;
+            }
+
+            @include media-breakpoint-up(lg) {
+                bottom: -10%;
+                left: -5%;
+                width: 50%;
+            }
+        }
+
+        &__leaf-2 {
+            width: 160px;
+            max-width: 316px;
+            position: absolute;
+            z-index: $z-ind-3;
+            transform: rotate(-90deg);
+            top: auto;
+            bottom: -165px;
+            right: -65px;
+
+            @include media-breakpoint-up(lg) {
+                right: -100px;
+                top: 20px;
+                width: 20%;
+            }
+        }
+
+        &__image {
+            position: absolute;
+            z-index: $z-ind-2;
+            bottom: -335px;
+            width: 300px;
+            max-width: 345px;
+            right: 0px;
+            transform: rotate(7deg);
+            
+            @include media-breakpoint-up(lg) {
+                right: -30px;
+                width: 25%;
+                bottom: -50px;
+            }
+        }
+
+        &__roundel {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            top: -27px;
+            right: 10%;
+            
+            @include media-breakpoint-up(lg) {
+                width: 184px;
+                height: 184px;
+            }
+
+            &__text {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: auto;
+                animation: infinite-spinning 6s infinite linear;
+            }
+            &__fish {
+                position: absolute;
+                top: 51%;
+                left: 49%;
+                transform: translate(-50%, -50%);
+                width: 67%;
+            }
+        }
+    }
+
+    /* How Does It Work */
+    .how-it-works {
+        color: $navy;
+        text-align: center;
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 100px;
+        }
+
+        &__title {
+            @include font($cervo, 40px, 4px, 50px);
+            font-weight: 500;
+
+            @include media-breakpoint-up(lg) {
+                @include font($cervo, 50px, 4px, 60px);
+            }
+        }
+
+        /* Step */
+        &__step {
+            margin-bottom: 130px;
+            
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 30px;
+            };
+        }
+
+        &__heading {
+            @include font($cervo, 30px, 3px, 40px);
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        &__icon {
+            width: 120px;
+            margin-bottom: 12px;
+        }
+
+        &__text {
+            text-transform: uppercase;
+            margin-bottom: 0;
+
+            @include media-breakpoint-down(md) {
+                font-size: 16px;
+            }
+        }
+
+        &__arrow {
+            position: absolute;
+            transform: translateX(50%) rotate(90deg);
+            width: 91px;
+            right: 50%;
+            bottom: -67px;
+
+            @include media-breakpoint-up(lg) {
+                bottom: auto;
+                top: 55%;
+                transform: translateY(-50%);
+                right: -12%;
+            }
+            
+        }
+    }
+
+    /* What Do I Get */
+    .image-grid-small {
+        margin-bottom: 90px;
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 150px;
+        }
+
+        &__bg {
+            background-image: url('#{$images}bg-texture-rewards--mobile.png');
+            background-size: auto;
+            
+            @include media-breakpoint-up(lg) {
+                background-image: url('#{$images}bg-texture-rewards.png');
+                background-size: 100% 100%;
+            }
+        }
+    }
+
+
+    /* VIP Program */
+    .vip-program {
+        position: relative;
+        margin-bottom: 50px;
+        z-index: $z-ind-2;
+
+        @include media-breakpoint-up(lg) {
+            padding-top: 100px;
+        }
+    
+        &__container {
+            @include media-breakpoint-up(xxxxl) {
+                position: relative;
+            }
+        }
+        
+        &__img-col {
+            max-width: 110%;
+            flex: 0 0 110%;
+            margin-left: auto;
+            padding-bottom: 40px;
+            transform: rotate(3deg);
+            transform-origin: top;
+            position: relative;
+            z-index: $z-ind-1;
+            order: 1;
+
+            img {
+                min-height: 360px;
+            }
+
+            @include media-breakpoint-up(lg) {
+                max-width: 68%;
+                flex: 0 0 68%;
+                order: 0;
+
+                img {
+                    min-height: none;
+                    max-height: 100%;
+                }
+            }
+    
+            @include media-breakpoint-up(xl) {
+                min-height: 550px;
+                max-height: 665px;
+            }
+        }
+    
+        /* Content column */
+        &__content-col {
+            max-width: 105%;
+            flex: 0 0 105%;
+            position: relative;
+            left: -2.5%;
+            top: -100px;
+            order: 2;
+            z-index: $z-ind-2;
+            transform: rotate(-4deg);
+            transform-origin: top;
+            padding: 50px 70px 50px 45px;
+            background: $dark-navy;
+            color: $white;
+            
+            @include media-breakpoint-up(lg) {
+                position: absolute;
+                top: auto;
+                left: 60px;
+                bottom: 100px;
+                max-width: 35%;
+                padding: 70px 90px 70px 60px;
+                flex: 0 0 35%;
+                order: 0;
+            }
+    
+            &__title {
+                @include font($cervo, 50px, 4px, 60px);
+                color: $light-blue;
+                font-weight: 500;
+                max-width: 350px;
+                margin-bottom: 20px;
+            }
+
+            &__subheading {
+                @include font($cervo, 30px, 3px, 35px);
+                font-weight: 500;
+                margin-bottom: 0;
+            }
+    
+            .c-wave-divider {
+                transform: rotate(-1deg);
+                margin-bottom: 10px;
+            }
+        
+            &__content {
+                margin-bottom: 20px;
+            }
+        }
+
+        &__features-col {
+            @include flexbox(center, center);
+            flex-wrap: wrap;
+            flex: 0 0 86%;
+            position: relative;
+            margin-top: -120px;
+            z-index: $z-ind-2;
+            max-width: 500px;
+            margin-left: auto;
+            padding: 35px 20px 5px;
+            background: $blue;
+            color: $white;
+            order: 3;
+            
+            @include media-breakpoint-up(lg) {
+                flex: 0 0 65%;
+                max-width: 65%;
+                order: 0;
+                padding: 45px 40px 10px;
+                margin-top: -220px;
+            }
+        }
+
+        /* Features */
+        &__feature {
+            flex: 0 0 100%;
+            max-width: 100%;
+            @include flexbox(flex-start, center);
+            margin-bottom: 30px;
+
+            @include media-breakpoint-up(lg) {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+
+            img {
+                max-width: 67px;
+                max-height: 50px;
+                object-fit: contain;
+            }
+            
+            p {
+                flex: 1;
+                max-width: 210px;
+                @include font($cervo, 20px, 1px, 25px);
+                font-weight: 500;
+                margin: 2px 0px 0px 15px;
+            }
+        }
+    
+        &__stamp {
+            position: absolute;
+            z-index: $z-ind-2;
+            top: -80px;
+            right: 10%;
+            width: 150px;
+            max-width: 252px;
+            
+            @include media-breakpoint-up(lg) {
+                top: -93px;
+                width: 18%;
+            }
+
+            @include media-breakpoint-up(xxxxl) {
+                top: -15%
+            }
+        }
+    }
+
+
+    /* Engage & Win */
+    .con-img {
+        margin-bottom: 125px;
+        &__content-col {
+            bottom: 0;
+
+            &__subheading {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

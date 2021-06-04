@@ -1,0 +1,23 @@
+.page-id-722 {
+    .wysiwyg#mod-2 {
+        margin-top: -100px;
+
+        .c-wysiwyg {
+            img {
+                margin: 0 auto;
+                display: block;
+                max-width: 400px;
+                background: white;
+                padding: 12px;
+            }
+        }
+    }
+
+    .image-grid-small {
+        &__bg {
+            @include media-breakpoint-down(md) {
+                background-size: 100% 100%;
+            }
+        }
+    }
+}

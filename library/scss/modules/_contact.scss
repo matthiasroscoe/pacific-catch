@@ -1,0 +1,30 @@
+.contact {
+    color: $navy;
+    margin-bottom: 100px;
+
+    &__top {
+        margin-bottom: -2px;
+        display: block;
+    }
+
+    &__bottom {
+        margin-top: -2px;
+        display: block;
+    }
+
+    &__inner {
+        background: $brown;
+        padding-top: 70px;
+        padding-bottom: 50px;
+
+        @include media-breakpoint-up(lg) {
+            padding-top: 100px;
+        }
+    }
+
+    &__title {
+        @include font($cervo, 50px, 4px, 60px);
+        font-weight: 500;
+        text-align: center;
+    }
+}

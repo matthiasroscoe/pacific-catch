@@ -1,0 +1,46 @@
+/**
+ * Scrolling:  Fade in/up
+ */
+
+@keyframes fadeFromBottom {
+    0%   { transform: translateY(70px); opacity: 0; }
+    33%  { opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    0%   { opacity: 0; }
+    33%  { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.js-hidden {
+    opacity: 0;
+    animation-duration: 1000ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    
+    &.js-visible {
+        animation-name: fadeFromBottom;
+    }
+}
+
+.js-hidden--no-slide {
+    &.js-visible {
+        animation-name: fadeIn;
+    }
+}
+
+
+/**
+ * Infinite rotate/spinning
+ */
+
+@keyframes infinite-spinning {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

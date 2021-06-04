@@ -1,0 +1,10 @@
+section.wysiwyg {
+    position: relative;
+    z-index: $z-ind-1;
+    margin-bottom: 60px;
+    color: $navy;
+    
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 100px;
+    }
+}

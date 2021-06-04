@@ -1,0 +1,139 @@
+/*! Made with Bones: http://themble.com/bones :) */
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Main Stylesheet
+
+Here's where the magic happens. Here, you'll see we are calling in
+the separate media queries. The base mobile goes outside any query
+and is called at the beginning, after that we call the rest
+of the styles inside media queries.
+
+Helpful articles on Sass file organization:
+http://thesassway.com/advanced/modular-css-naming-conventions
+
+******************************************************************/
+
+/*********************
+IMPORTING Core
+These files are needed at the beginning so that we establish all
+our mixins, functions, and variables that we'll be using across
+the whole project.
+*********************/
+
+/***
+	Bootstrap
+***/
+
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+
+@import "bootstrap/mixins/breakpoints";
+@import "bootstrap/mixins/grid-framework";
+@import "bootstrap/mixins/grid";
+
+@import "bootstrap/grid";
+@import "bootstrap/utilities/display";
+@import "bootstrap/utilities/flex";
+@import "bootstrap/utilities/spacing";
+
+// Mixins
+@import "core/mixins";
+
+// Sass variables
+@import "core/variables";
+
+// Typography
+@import "core/typography";
+
+// Utilities
+@import "core/utilities";
+
+
+/*********************
+PRINT STYLESHEET
+Feel free to customize this. Remember to add things that won't make
+sense to print at the bottom. Things like nav, ads, and forms should
+be set to display none.
+*********************/
+@media print {
+	// styles in print.scss
+	@import "core/print";
+}
+
+/***
+	Components
+***/
+
+@import "components/header";
+@import "components/footer";
+@import "components/buttons";
+@import "components/wysiwyg";
+@import "components/forms";
+@import "components/misc-ui";
+@import "components/nav";
+
+/***
+	Modules
+***/
+
+@import "modules/hero";
+@import "modules/top-banner";
+@import "modules/intro";
+@import "modules/call-to-action";
+@import "modules/highlights-slider";
+@import "modules/highlighted-posts";
+@import "modules/whats-new";
+@import "modules/content-image--advanced";
+@import "modules/content-image--simple";
+@import "modules/three-cols";
+@import "modules/rewards";
+@import "modules/content-icons-image";
+@import "modules/our-partners";
+@import "modules/services";
+@import "modules/contact";
+@import "modules/instagram";
+@import "modules/image-grid--small";
+@import "modules/image-grid--big";
+@import "modules/find-us";
+@import "modules/faqs";
+@import "modules/wysiwyg";
+
+/***
+	Pages
+***/
+
+@import "pages/global";
+@import "pages/default";
+@import "pages/rewards";
+@import "pages/our-food";
+@import "pages/about";
+@import "pages/menu";
+@import "pages/catering";
+@import "pages/private-events";
+@import "pages/catering-priv-events";
+@import "pages/careers";
+@import "pages/whats-new";
+@import "pages/archive-locations";
+@import "pages/single-location";
+@import "pages/single-post";
+@import "pages/covid";
+@import "pages/modular-page";
+@import "pages/contact";
+@import "pages/reservation";
+
+/***
+	Partials
+***/
+
+@import "partials/animations";
+
+
+/***
+	Vendor
+***/
+
+@import "vendor/flickity.css";
+@import "vendor/selectric.css";

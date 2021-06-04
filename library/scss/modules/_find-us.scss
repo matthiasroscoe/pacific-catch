@@ -1,0 +1,121 @@
+.find-us {
+    position: relative;
+    margin-top: -100px;
+    margin-bottom: -100px;
+    padding-top: 170px;
+    padding-bottom: 175px;
+    color: $navy;
+
+    @include media-breakpoint-up(lg) {
+        padding-top: 200px;
+    }
+
+    &__leaf {
+        position: absolute;
+        left: -25%;
+        top: 10%;
+        max-width: 1750px;
+
+        @include media-breakpoint-up(lg) {
+            top: -10%;
+        }
+    }
+
+    &__map-col {
+        order: 2;
+        margin-top: 30px;
+
+        @include media-breakpoint-up(lg) {
+            order: 1;
+            margin-top: 0;
+        }
+
+        #find-us-map {
+            height: 240px;
+
+            @include media-breakpoint-up(md) {
+                height: 400px;
+            }
+
+            @include media-breakpoint-up(lg) {
+                height: 31vw;
+                max-height: 600px;
+            }
+        }
+
+        a {
+            @include font($proxima, 14px, 1px, 28px);
+            text-transform: uppercase;
+            text-decoration: underline;
+            display: block;
+            margin-top: 20px;
+            padding-right: 50px;
+        }
+    }
+
+
+
+    &__text-col {
+        order: 1;
+
+        @include media-breakpoint-up(lg) {
+            order: 2;
+        }
+        
+        h2 {
+            @include font($cervo, 30px, 4px, 32px);
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            @include font($cervo, 20px, 4px, 35px);
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+        
+        .address {
+            margin-bottom: 20px;
+            
+            h2 {
+                @include media-breakpoint-down(md) {
+                    margin-bottom: 10px;
+                }
+            }
+
+            p {
+                color: $blue;
+                @include font($proxima, 16px, 1px, 24px);
+            }
+        }
+
+        .team {
+            &-title {
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-size: 12px;
+                line-height: 1;
+                font-weight: 500;
+                margin-top: 10px;
+                margin-bottom: 0;
+            }
+        }
+        
+        .email,
+        .phone {
+            margin-bottom: 20px;
+            
+            a {
+                font-weight: 400;
+                @include font($proxima, 16px, 1px, 24px);
+            }
+        }
+
+        .c-btn {
+            @include media-breakpoint-down(md) {
+                min-width: 200px;
+            }
+        }
+        
+    }
+}

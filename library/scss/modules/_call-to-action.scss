@@ -1,0 +1,123 @@
+.cta {
+    padding-top: 50px;
+    padding-bottom: 100px;
+    $color: $navy;
+
+    &--yellow {
+        > .container-fluid {
+            background: $light-yellow;
+            color: $navy;
+        }
+    }
+    &--blue {
+        > .container-fluid {
+            background: $navy;
+            color: $white;
+        }
+    }
+
+    &__top { margin-bottom: -10px; }
+
+    .container {
+        padding-top: 65px;
+        padding-bottom: 30px;
+        
+        @include media-breakpoint-up(lg) {
+            padding-top: 50px;
+        }
+    }
+
+    &__leaf {
+        position: absolute;
+        transform: rotate(0deg);
+        top: -70px;
+        left: -80px;
+        width: 220px;
+        
+        @include media-breakpoint-up(lg) {
+            transform: rotate(-25deg);
+            top: -110px;
+            left: -5%;
+            width: 33%;
+            max-width: 316px;
+        }
+    }
+
+    /* Images */
+    &__img-col {
+        position: relative;
+
+        img {
+            width: 87%;
+            max-width: 340px;;
+            margin: 0 auto;
+        }
+
+        &--1 {
+            img {
+                position: absolute;
+                transform: rotate(-9deg);
+                bottom: -150px;
+                @include media-breakpoint-up(lg) {
+                    right: 35px;
+                }
+            }
+        }
+
+        &--2 {
+            img {
+                position: absolute;
+                transform: rotate(6deg);
+                top: -150px;
+                @include media-breakpoint-up(lg) {
+                    left: 35px;
+                }
+            }
+        }
+    }
+
+
+    /* Text Col */
+
+    &__title {
+        @include font($cervo, 40px, 4px, 50px, 500);
+        margin-bottom: 15px;
+        
+        @include media-breakpoint-up(lg) {
+            @include font($cervo, 50px, 4px, 60px, 500);
+            margin-bottom: 30px;
+        }
+    }
+
+    &__text {
+        @include media-breakpoint-down(md) {
+            max-width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .c-wave-divider {
+        display: block;
+        margin: 20px auto 25px;
+    }
+
+    .c-btn {
+        margin-bottom: 0;
+        display: inline-block;
+    }
+
+    .has-description {
+        .c-btn {
+            position: absolute;
+            bottom: -70px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            @include media-breakpoint-up(lg) {
+                bottom: -80px;
+            }
+        }
+    }
+
+}

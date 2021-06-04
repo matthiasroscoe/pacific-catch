@@ -1,0 +1,74 @@
+.page-template-modular-page {
+
+    section {
+        margin-bottom: 85px;
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 130px;
+        }
+    }
+
+    .hero {
+        margin-bottom: 80px;
+    }
+
+    .top-banner {
+        &#mod-1 {
+            margin-bottom: 0;
+        }
+
+        &:not(#mod-1) {
+            h1 {
+                margin-bottom: 25px;
+            }
+        }
+
+        & + .con-img {
+            @include media-breakpoint-down(md) {
+                padding-top: 20px;
+            }
+        }
+    }
+
+    .con-img {
+        @include media-breakpoint-up(lg) {
+            padding-top: 20px;
+        }
+
+        &.is-reversed {
+            @include media-breakpoint-down(md) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .highlights-slider {
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 40px;
+        }
+    }
+
+    .image-grid-small {
+        margin-bottom: 100px;
+    }
+}
+
+
+
+
+//Adding page specific rules for modular page promoting new advert (Come Together)
+.page-id-1547 .hero{
+    margin-bottom: 0px;
+}
+.page-id-1547 .hero .carousel,
+.page-id-1547 .hero .carousel img{
+    max-height:400px;
+}
+
+.page-id-1547 .intro--advanced{
+    margin-top:0px;
+}
+
+.page-id-1547 .c-wysiwyg p{
+    font-size: 19px;
+    line-height: 32px;
+}

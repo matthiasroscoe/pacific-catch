@@ -1,0 +1,35 @@
+.page-template-reservation {
+    .reservation {
+        margin-bottom: 80px;
+        color: $navy;
+
+        h1 {
+            @include font($cervo, 30px, 3px, 35px, 400);
+            margin-bottom: 15px;
+        }
+
+        .selectric-js-reservation-select {
+            .selectric {
+                height: 60px;
+
+                .label,
+                .button {
+                    height: 60px;
+                    line-height: 60px;
+                }
+            }
+        }
+
+        .c-btn {
+            margin-top: 20px;
+            pointer-events: none;
+            opacity: .5;
+            transition: all ease 400ms;
+
+            &.is-active {
+                pointer-events: all;
+                opacity: 1;
+            }
+        }
+    }
+}

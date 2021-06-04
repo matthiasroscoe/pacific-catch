@@ -1,0 +1,223 @@
+.whats-new {
+    position: relative;
+    z-index: $z-ind-2;
+    margin-top: -70px;
+
+    &__primary-title {
+        @include font($cervo, 70px, 6px, 90px);
+        font-weight: 500;
+        color: $yellow;
+        margin-bottom: 40px;
+    }
+
+    &__container {
+        margin-bottom: 80px;
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 160px;
+            max-width: 1800px;
+        }
+    }
+    
+    &__img-col {
+        max-width: 108%;
+        flex: 0 0 108%;
+        transform: rotate(-3deg);
+        transform-origin: bottom;
+        position: relative;
+        left: -3%;
+
+        @include media-breakpoint-up(lg) {
+            max-width: 66.666%;
+            flex: 0 0 66.666%;
+            left: auto;
+            max-height: 750px;
+            overflow: hidden;
+        }
+    }
+
+    /* Content column */
+    &__content-col {
+        padding: 100px 62px 60px 32px;
+        margin-top: -80px;
+        max-width: 100%;
+        flex: 0 0 100%;
+        position: relative;
+        transform: rotate(3deg);
+        transform-origin: bottom;
+
+        background: $light-yellow;
+        
+        @include media-breakpoint-up(lg) {
+            padding: 120px 90px 75px;
+            margin-top: 0;
+            max-width: 41.6667%;
+            flex: 0 0 41.6667%;
+            position: absolute;
+            right: 5%;
+            top: 50%;
+            transform: rotate(3deg) translateY(-50%);
+        }
+
+        @include media-breakpoint-up(xxxl) {
+            z-index: 1;
+        }
+    }
+
+    &__title {
+        @include font($cervo, 40px, 4px, 50px);
+        color: $navy;
+        font-weight: 500;
+        margin-bottom: 20px;
+        
+        @include media-breakpoint-up(lg) {
+            @include font($cervo, 50px, 4px, 60px);
+        }
+    }
+
+    &__text {
+        @include font($proxima, 16px, 1px, 28px);
+        color: $navy;
+        margin-bottom: 0;
+
+        @include media-breakpoint-down(md) {
+            font-size: 15px;
+        }
+    }
+
+    .c-btn {
+        position: absolute;
+        left: 15px;
+        bottom: -40px;
+        padding-left: 55px;
+        padding-right: 55px;
+
+        @include media-breakpoint-up(lg) {
+            left: 90px;
+        }
+    }
+
+    .c-wave-divider {
+        margin-bottom: 25px;
+        transform: rotate(0deg);
+
+        @include media-breakpoint-up(lg) {
+            // transform: rotate(-3deg);
+        }
+    }
+
+    /* Icons */
+    .whats-new__icon {
+        position: absolute;
+        top: 30px;
+        left: 35px;
+        background-repeat: no-repeat;
+
+        @include media-breakpoint-up(lg) {
+            top: 50px;
+            left: 45px;
+            transition: all ease 200ms;;
+            &:hover {
+                transform: rotate(-8deg);
+            }
+        }
+    }
+
+    &__container:nth-child(3n - 1) {
+        .whats-new__icon {
+            width: 42px;
+            height: 42px;
+            background-image: url(#{$images}icons/pineapple.svg);
+            background-size: contain;
+            
+            @include media-breakpoint-up(lg) {
+                width: 55px;
+                height: 60px;
+            }
+        }
+    }
+    
+    &__container:nth-child(3n) {
+        .whats-new__icon {
+            width: 55px;
+            height: 55px;
+            background-image: url(#{$images}icons/surf-board.svg);
+            background-size: contain;
+            
+            @include media-breakpoint-up(lg) {
+                left: 55px;
+                width: 58px;
+                height: 58px;
+            }
+        }
+    }
+    
+    &__container:nth-child(3n - 2) {
+        .whats-new__icon {
+            width: 45px;
+            height: 55px;
+            background-image: url(#{$images}icons/face_blue.svg);
+            background-size: contain;
+            
+            @include media-breakpoint-up(lg) {
+                left: 65px;
+
+            }
+        }
+    }
+
+
+    /* Every even container */
+    &__container--even {
+        > .row {
+            justify-content: flex-end;
+        }
+
+        .whats-new__img-col { 
+            transform: rotate(3deg);
+            right: -3%;
+            left: auto;
+            
+            @include media-breakpoint-up(lg) {
+                order: 2;
+                right: 1.5%;
+            }
+        }
+        
+        .whats-new__content-col { 
+            right: auto;
+            transform-origin: top;
+            right: -3%;
+            left: auto;
+            transform: rotate(-3deg);
+            
+            @include media-breakpoint-up(lg) {
+                left: 3%;
+                right: auto;
+                z-index: 2;
+                order: 1; 
+                transform-origin: bottom;
+                transform: rotate(-3deg) translateY(-50%);
+            }
+        }
+
+        .c-wave-divider {
+            transform: rotate(-1deg);
+        }
+    }
+
+
+
+    &__leaf {
+        position: absolute;
+        top: -6%;
+        right: -10%;
+        width: 50%;
+
+        @include media-breakpoint-up(lg) {
+            right: -14%;
+        }
+    }
+
+
+}

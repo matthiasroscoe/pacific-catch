@@ -1,0 +1,66 @@
+.page-template-our-food {
+
+    .con-img {
+        margin-top: 25px;
+        margin-bottom: 150px;
+
+        &__content-col {
+            @include media-breakpoint-up(lg) {
+                flex: 0 0 47%;
+                max-width: 47%;
+                bottom: -30px;
+                padding-top: 60px;
+                
+                &.no-buttons {
+                    bottom: auto !important;
+                    margin-top: 60px !important;
+                }
+            }
+        }
+    }
+
+
+    .three-cols {
+        margin-bottom: 0;
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 125px;
+        }            
+        
+
+        &__img {
+            @include media-breakpoint-up(lg) {
+                height: 26vw;
+            }
+        }
+
+        &__leaf {
+            @include media-breakpoint-down(md) {
+                top: 100px;
+            }
+        }
+    }
+
+
+
+    .image-grid-big {
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 100px;
+        }
+
+        &__text {
+            text-transform: none;
+        }
+    }
+
+    .faqs {
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 225px;
+        }
+    }
+
+    .cta {
+        @include media-breakpoint-up(lg) {
+            padding-bottom: 200px;
+        }
+    }
+}

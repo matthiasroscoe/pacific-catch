@@ -1,0 +1,135 @@
+.intro {
+    margin: 0 0 130px;
+    position: relative;
+
+    @include media-breakpoint-up(lg) {
+        margin: 40px 0;   
+    }
+
+    &__top { margin-bottom: -10px; }
+
+    &-container {
+        background: $light-yellow;
+        color: $navy;
+        padding-top: 55px;
+        padding-bottom: 50px;
+        @include media-breakpoint-up(lg) {
+            padding-top: 10px;
+            padding-bottom: 30px;  
+        }
+    }
+
+    &__title {
+        @include font($cervo, 34px, 3px, 38px);
+        font-weight: 500;
+        
+        @include media-breakpoint-down(md) {
+            @include font($cervo, 30px, 3px, 38px);
+            margin-bottom: 10px;
+        }
+    }
+
+    .c-btn {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -90px;
+
+        @include media-breakpoint-up(lg) {
+            bottom: -110px;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            bottom: -130px;
+        }
+    }
+
+    &__leaf {
+        transform: rotate(180deg);
+        position: absolute;
+        z-index: $z-ind-1;
+        width: 65%;
+        max-width: 400px;
+        left: -30%;
+        bottom: -15%;
+
+        @include media-breakpoint-up(md) {
+            left: -15%;
+            width: 40%;
+        }
+
+        @include media-breakpoint-up(lg) {
+            width: 50%;
+            left: -5%;
+        }
+
+        @include media-breakpoint-up(xxxl) {
+            max-width: 550px;
+        }
+    }
+
+    &--advanced {
+        margin-bottom: 80px;
+        
+        @include media-breakpoint-down(md) {
+            margin-bottom: 80px;
+            
+            &__leaf {
+                bottom: -30px;
+            }
+        }
+    
+        &__tagline {
+            width: 375px;
+            max-width: 90%;
+            margin-top: -20px;
+            margin-bottom: 12px;
+        }
+    
+        &__img1 {
+            top: -90px;
+            left: -5%;
+            max-width: 110px;
+            transform: rotate(-7deg);
+            z-index: $z-ind-2;
+            @include media-breakpoint-up(sm) {
+                top: -40px;
+                left: -2%;
+                max-width: 140px;
+            }
+            @include media-breakpoint-up(lg) {
+                left: 5%;
+                max-width: 175px;
+            }
+        }
+    
+        &__img2 {
+            bottom: -35px;
+            right: -1%;
+            max-width: 100px;
+            transform: rotate(10deg);
+            @include media-breakpoint-up(sm) {
+                bottom: 0px;
+                max-width: 155px;
+            }
+            @include media-breakpoint-up(lg) {
+                bottom: 15px;
+                right: 5%;
+            }
+        }
+    
+        &__img3 {
+            width: 125px;
+            right: -40px;
+            top: -60px;
+            @include media-breakpoint-up(lg) {
+                width: 200px;
+                top: -60px;
+                right: -30px;
+            }
+            @include media-breakpoint-up(xl) {
+                width: 250px;
+            }
+        }
+    }
+}

@@ -1,0 +1,64 @@
+.image-grid-small {
+    color: $navy;
+    position: relative;
+    
+    &__bg {
+        background-image: url('#{$images}bg-texture-light-blue--mobile.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center top;
+        
+        @include media-breakpoint-up(lg) {
+            background-image: url('#{$images}bg-texture-light-blue.png');
+            background-size: 100% 100%;
+        }
+    }
+
+    &__title {
+        @include font($cervo, 50px, 4px, 52px);
+        font-weight: 500;
+        position: relative;
+    }
+
+    &__inner {
+        justify-content: center;
+        flex-direction: column;
+
+        @include media-breakpoint-up(lg) {
+            flex-direction: row;
+        }
+    }
+
+    /* Grid Item */
+    &__item {
+        flex: 0 0 20%;
+        padding: 0 20px;
+        margin-bottom: 30px;
+
+        img {
+            max-width: 110px;
+            margin: 0 auto;
+        }
+
+        p {
+            line-height: 1.2;
+            text-transform: uppercase;
+            margin-top: 10px;
+
+            @include media-breakpoint-down(md) {
+                margin-top: 20px;
+                font-size: 16px;
+            }
+        }
+    }
+
+
+    /* When one row of icons */
+    &.has-one-row {
+        min-height: 375px;
+
+        .image-grid-small__title {
+            margin-bottom: 65px;
+        }
+    }
+}
